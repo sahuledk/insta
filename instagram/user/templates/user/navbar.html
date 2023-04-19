@@ -1,0 +1,8 @@
+{% load static %}
+<h1>instagram</h1>
+<a href="{% url 'logout' %}">Log-out</a>
+<a href="{% url 'feed-create' %}">Create</a>
+<a href="{% url 'account' user.profile.id %}">Account</a>
+<hr>
+{% block content %}
+{% endblock content %}

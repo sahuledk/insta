@@ -1,0 +1,10 @@
+{% extends 'user/navbar.html' %}
+{% block content %}
+{% for feed in feeds %}
+<a href="{% url 'profile' feed.owner.id %}">{{feed.owner}}</a>
+<img src="{{feed.owner.profile_image.url}}" height="100px" width="100px"><br>
+<img src="{{feed.photo.url}}" height="500px" width="500px"><br>
+<p>{{feed.status}}</p>
+<small>{{feed.created|timesince}} ago</small><br><br><br><br>
+{% endfor %}
+{% endblock content %}

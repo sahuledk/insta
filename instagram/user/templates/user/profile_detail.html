@@ -1,0 +1,11 @@
+{% load static %}
+
+
+{{profile.name}}
+{{profile.email}}
+<img src="{{profile.profile_image.url}}" height="100px", width="100px">
+{% for feed in profile.feed_set.all %}
+{{feed.status}}
+<img src="{{feed.photo.url}}" height="500px" width="500px"><br>
+<small>{{feed.created}}<small>
+{% endfor %}
